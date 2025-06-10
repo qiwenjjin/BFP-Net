@@ -44,6 +44,7 @@ Run  ``test.py`` to get pansharpened ms image.
 
 Then, run ``evaluation/main.m`` to calculate the mertrics.
 
+## Citation
 ```shell
 @article{liu2025bi,
   title={Bi-domain fusion pyramid network for pansharpening with deep anisotropic diffusion},
