@@ -15,13 +15,17 @@ data/                               # functions for reading data
     data.py
     dataset.py
 dataset/                            # test data of QB dataset
-    QB_data.zip 
+    QB_data.zip
+evaluation/                         # matlab function for evaluation
+    ...
+    ...
+    ...
 model/                              # network definition and auxiliary function
     bipyramid_diffused.py
     modules.py
     refine.py
-solver/                             # 
-    test_solver
+solver/                             # packaged functions for training, testing and evaluating
+    solver
 utils/                              # auxiliary functions for pansharpening
     cofig.py
     utils.py
@@ -31,4 +35,5 @@ test.py                             # run this file to test the network
 ```
 
 ### Usage
-Run  ``test.py``
+Run  ``test.py`` to get pansharpened ms image.
+Then, run ``evaluation/main.m`` to calculate the mertrics.
