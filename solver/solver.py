@@ -23,7 +23,7 @@ import imageio
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-class Solver(BaseSolver):
+class Solver:
     def __init__(self, cfg):
         super(Solver, self).__init__(cfg)
         self.cfg = cfg
