@@ -34,7 +34,7 @@ model/                              # network definition and auxiliary function
 solver/                             # packaged functions for training, testing and evaluating
     solver
 utils/                              # auxiliary functions for pansharpening
-    cofig.py
+    config.py
     utils.py
 option_QB.yml                       # config file
 test.py                             # run this file to test the network
