@@ -11,6 +11,8 @@ This is the implementation of the article: "**Bi-domain fusion pyramid network f
 ### File List
 Some important files are listed here:
 ```
+ckp/
+    checkpoint.pth
 data/                               # functions for reading data
     data.py
     dataset.py
@@ -36,4 +38,5 @@ test.py                             # run this file to test the network
 
 ### Usage
 Run  ``test.py`` to get pansharpened ms image.
+
 Then, run ``evaluation/main.m`` to calculate the mertrics.
