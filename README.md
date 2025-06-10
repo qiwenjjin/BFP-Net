@@ -8,6 +8,9 @@ This is the implementation of the article: "**Bi-domain fusion pyramid network f
 1. Python  3.9.13
 2. Pytorch 1.11.0
 
+### Dataset and Checkpoint
+Datasets and checkpoint can be found in [Google Driver](https://drive.google.com/drive/folders/1ZeCFPkNf4IlrkIUxoVNNAuK0b25wZ2oh?usp=sharing) or [BaiduCloud](https://pan.baidu.com/s/177x90-aALTWld0pJdw6CBw?pwd=csk2).
+
 ### File List
 Some important files are listed here:
 ```
