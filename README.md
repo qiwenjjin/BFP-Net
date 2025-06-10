@@ -36,7 +36,6 @@ solver/                             # packaged functions for training, testing a
 utils/                              # auxiliary functions for pansharpening
     cofig.py
     utils.py
-    vgg.py
 option_QB.yml                       # config file
 test.py                             # run this file to test the network
 ```
