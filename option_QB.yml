@@ -1,0 +1,62 @@
+
+name: Net
+dataset: QB
+algorithm: bipyramid_diffused 
+nEpochs: 1
+gpu_mode: True
+save_best: True
+gpus: [0]
+threads: 4
+log_dir: ./log/
+
+
+seed: 123 
+checkpoint: ./ckp/
+data_dir_train: ./dataset/QB_data/train128
+data_dir_eval: ./dataset/QB_data/test128
+
+
+source_ms: ms
+source_pan: pan
+
+pretrain:
+  pretrained: False
+  pre_sr: pyddn_iccv/bestSSIM.pth  
+  pre_folder: /home/your_folder/your_folder/newpan/checkpoint/
+
+test:  
+  algorithm: pyddn_iccv_bipyramid_diffused 
+  type: test 
+  data_dir: ./dataset/QB_data/test128
+  
+  source_ms: ms
+  source_pan: pan
+  model: QB_4_2024-05-17_223045/bestPSNR.pth 
+  save_dir: ./saved_data/net_QB
+
+data:
+  upsacle:  4
+  batch_size: 4 
+  patch_size: 32
+  data_augmentation: False
+  n_colors: 4
+  rgb_range: 255
+  normalize : False
+  
+schedule:
+  lr: 5e-6 #5e-6 #1e-2 #5e-4
+  use_CosAneal: False
+  epoch_num: 100
+  decay: 0.1
+  minimum: 0 #0 #5e-8
+  gamma: 0.1
+  optimizer: ADAM #[ADAM, SGD, RMSprop]
+  momentum: 0.9 #SGD momentum
+  beta1: 0.9 #ADAM beta
+  beta2: 0.999 #ADAM beta
+  epsilon: 1e-8 #ADAM epsilon
+  alpha: 0.9 #RMSprop alpha
+  weight_dency: 0
+  gclip: 40 #0.4   #0.4  0.04
+  loss: L1 #[MSE, L1]
+  use_YCbCr: False
