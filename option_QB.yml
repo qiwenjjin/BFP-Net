@@ -21,8 +21,8 @@ source_pan: pan
 
 pretrain:
   pretrained: False
-  pre_sr: pyddn_iccv/bestSSIM.pth  
-  pre_folder: /home/your_folder/your_folder/newpan/checkpoint/
+  pre_sr: /pre_trained_ckp_file
+  pre_folder: /your_folder/checkpoint/
 
 test:  
   algorithm: pyddn_iccv_bipyramid_diffused 
@@ -31,7 +31,7 @@ test:
   
   source_ms: ms
   source_pan: pan
-  model: QB_4_2024-05-17_223045/bestPSNR.pth 
+  model: bestPSNR.pth 
   save_dir: ./saved_data/net_QB
 
 data:
